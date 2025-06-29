@@ -2,6 +2,7 @@ import RestaurantCard from "./RestaurantCard";
 import reslistobj from "../utils/mokedData";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 const Body =()=>{
     const [reslist, setReslistObj]= useState([]);
@@ -70,18 +71,14 @@ return reslist && reslist.length===0 ? (<Shimmer/>) :(
             {//reslist
                 filterreslist.map((restaurant)=>
                     (
-                    // <RestaurantCard resData={restaurant}/> not working 
-                    <RestaurantCard 
-                         key={restaurant.info.id} 
-                            resData={restaurant} 
-        />
+                
+                   <Link to={"/restinfo/"+restaurant.info.id} key={restaurant.info.id}>
+                     <RestaurantCard 
+                    //  key={restaurant.info.id}
+                      resData={restaurant} /></Link>
                 ))
             }
-            {/* <RestaurantCard 
-            resData = {reslistobj[0]} />
-             <RestaurantCard 
-            resData = {reslistobj[1]} />
-             */}
+            
 
        </div>
     </div>

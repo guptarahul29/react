@@ -9,10 +9,7 @@ const RestaurantCard =(props)=>{
 
     return (
         <div className="res-card">
-
-
-
-            <img className="card-img" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2025/1/11/6a328a84-014a-402d-9a6a-3dd634b0239e_565293.JPG"></img>
+             <img className="card-img" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2025/1/11/6a328a84-014a-402d-9a6a-3dd634b0239e_565293.JPG"></img>
             
             <div className="dish-info">
                 <h2>{name}</h2>
